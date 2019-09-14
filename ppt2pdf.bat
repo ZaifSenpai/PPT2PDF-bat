@@ -19,9 +19,9 @@ IF NOT EXIST "%inp%" (
 )
 
 IF EXIST "%inp%\*" (
-	FOR %%i in ("%inp%\*.pp*") do CSCRIPT D:\ppt2pdf.vbs "%%i" "%out%"\"%%~ni".pdf
+	FOR %%i in ("%inp%\*.pp*") do CSCRIPT ppt2pdf.vbs "%%i" "%out%"\"%%~ni".pdf
 ) ELSE (
-	CSCRIPT D:\ppt2pdf.vbs "%inp%" "%out%"
+	CSCRIPT ppt2pdf.vbs "%inp%" "%out%"
 )
 
 IF NOT EXIST "%out%" (
